@@ -6,7 +6,7 @@ var path = require('path');
 new Canvas.Font('msyhl', path.join(__dirname, "msyhl.ttc"));
 
 module.exports = function (config) {
-
+//  参考https://github.com/suxiaoxin/node-echarts
     var ctx = new Canvas(128, 128);
     echarts.setCanvasCreator(function () {
         return ctx;
@@ -43,9 +43,9 @@ module.exports = function (config) {
 
     if (config.path) {
         fs.writeFileSync(config.path, chart.getDom().toBuffer());
+        console.log("Create Img:" + config.path);
     }
     // fs.writeFileSync(config.path + '.json', config.option);
-    // console.log("Create Img:" + config.path);
 
     chart.dispose();
 
