@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-canvas-echarts",
+  "version": "1.0.0",
+  "description": "docker-ubuntu-nodejs-canvas-echarts",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lrb",
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.8.10:Museum/nodejs-canvas-echarts.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "echarts": "^3.5.3"
+  },
+  "//": " if not docker you need manual:npm i canvas"
+}
