@@ -13,7 +13,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "echarts": "^3.5.3"
   },
   "//": " if not docker you need manual:npm i canvas"
 }
