@@ -13,6 +13,8 @@
   },
   "license": "ISC",
   "dependencies": {
-  },
-  "//": " if not docker you need manual:npm i canvas"
+    "lowdb": "^1.0.0",
+    "echarts": "^3.8.5",
+    "canvas": "^1.6.9"
+  }
 }
