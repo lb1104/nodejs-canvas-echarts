@@ -13,7 +13,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "lowdb": "^1.0.0",
     "echarts": "^3.8.5",
     "canvas": "^1.6.9",
     "underscore": "^1.8.3"
