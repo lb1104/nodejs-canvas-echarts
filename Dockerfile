@@ -7,7 +7,7 @@ RUN apt update -yqq &&\
 	dpkg-reconfigure -f noninteractive tzdata &&\
 	apt install -yqq curl && curl -sL https://deb.nodesource.com/setup_6.x | bash -  && \
     apt install -yqq nodejs libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev python&& \
-    npm install -g canvas echarts underscore&& \
+    npm install -g canvas@1.6.9 echarts@3.8.5 underscore@1.8.3 && \
     apt autoclean &&\
     apt autoremove &&\
     rm -rf /var/lib/apt/lists/*

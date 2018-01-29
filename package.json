@@ -9,7 +9,7 @@
   "author": "lrb",
   "repository": {
     "type": "git",
-    "url": "git@192.168.8.10:Museum/nodejs-canvas-echarts.git"
+    "url": "git@github.com:lb1104/nodejs-canvas-echarts.git"
   },
   "license": "ISC",
   "dependencies": {
