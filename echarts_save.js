@@ -3,11 +3,15 @@ var Canvas = require("canvas");
 var fs = require('fs');
 var path = require('path');
 
+//定义中英文字体
+new Canvas.Font('arial', path.join(__dirname, "arial.ttf"));
 new Canvas.Font('msyhl', path.join(__dirname, "msyhl.ttc"));
 
-module.exports = function (config) {
 //  参考https://github.com/suxiaoxin/node-echarts
+module.exports = function (config) {
+
     var ctx = new Canvas(128, 128);
+
     echarts.setCanvasCreator(function () {
         return ctx;
     });
@@ -47,7 +51,7 @@ module.exports = function (config) {
     }
     // fs.writeFileSync(config.path + '.json', config.option);
 
-    chart.dispose();
+    chart.dispose();//释放
 
     return {base64img: base64_img, option: config.option, data: config.data};
 

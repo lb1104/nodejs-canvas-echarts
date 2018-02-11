@@ -2,7 +2,7 @@
 
 var echarts = require('echarts');
 require('echarts/dist/extension/dataTool');
-var echarts_save = require('./echarts');
+var echarts_save = require('./echarts_save');
 
 var data = echarts.dataTool.prepareBoxplotData([
     [850, 740, 900, 1070, 930, 850, 950, 980, 980, 880, 1000, 980, 930, 650, 760, 810, 1000, 1000, 960, 960],
@@ -15,7 +15,7 @@ var data = echarts.dataTool.prepareBoxplotData([
 var option = {
     title: [
         {
-            text: '测试',
+            text: '测试汉字',
             left: 'center',
         },
         {

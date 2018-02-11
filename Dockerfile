@@ -1,17 +1,4 @@
-FROM ubuntu:16.04
-
-RUN apt update -yqq &&\
-    apt install -yqq tzdata &&\
-    ln -sf /usr/share/zoneinfo/Asia/Chongqing /etc/localtime &&\
-	echo "Asia/Chongqing" > /etc/timezone &&\
-	dpkg-reconfigure -f noninteractive tzdata &&\
-	apt install -yqq curl && curl -sL https://deb.nodesource.com/setup_6.x | bash -  && \
-    apt install -yqq nodejs libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev python&& \
-    npm install -g canvas@1.6.9 echarts@3.8.5 underscore@1.8.3 && \
-    apt autoclean &&\
-    apt autoremove &&\
-    rm -rf /var/lib/apt/lists/*
-
-ENV NODE_PATH /usr/lib/node_modules
-
-ENV LANG C.UTF-8
+FROM alpine:3.7
+RUN apk update && apk add build-base tzdata nodejs cairo-dev jpeg-dev pango-dev freetype-dev giflib-dev&& \
+    cp -r -f /usr/share/zoneinfo/Asia/Chongqing /etc/localtime && \
+    cd / && npm i -d canvas@1.6.9 echarts@3.8.5 underscore@1.8.3

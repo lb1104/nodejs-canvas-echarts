@@ -1,7 +1,7 @@
 {
   "name": "nodejs-canvas-echarts",
   "version": "1.0.0",
-  "description": "docker-ubuntu-nodejs-canvas-echarts",
+  "description": "docker-alpine-nodejs-canvas-echarts",
   "main": "run.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
